@@ -16,7 +16,9 @@ Learn enough JavaScript to manipulate the DOM, handle form events, and make fetc
 
 | Lesson | Topics |
 |--------|--------|
-| lesson-01 | Variables, data types, functions |
+| lesson-01 | Variables (`const`, `let`, `var`), data types, `typeof`, template literals, functions, arrays, `for...of` |
+| lesson-02 | DOM manipulation — `querySelector`, `textContent`, `innerHTML`, `addEventListener` |
+| lesson-03 | Fetch API — `async/await`, consuming a REST API (CVVJ), rendering JSON to the DOM |
 
 ---
 
