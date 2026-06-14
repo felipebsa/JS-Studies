@@ -22,6 +22,14 @@ Learn enough JavaScript to manipulate the DOM, handle form events, and make fetc
 
 ---
 
+## Related Projects
+
+| Project | Description |
+|---------|-------------|
+| [CVVJ](https://github.com/felipebsa/CVVJ) | REST API used in lesson-03 as the fetch target — built with FastAPI + SQLAlchemy |
+
+---
+
 ## Stack
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
