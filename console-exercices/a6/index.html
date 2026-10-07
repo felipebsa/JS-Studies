@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A6 · Lists (arrays)</title>
+</head>
+
+<body>
+
+  <h1>A6 · Lists (arrays)</h1>
+
+  <script>
+
+    const prices = [30, 80, 55, 120, 20];
+
+
+    const expensive = prices.filter(p => p > 50);
+
+    const discounted = expensive.map(p => p * 0.9);
+
+
+    console.log(expensive.join(", "));
+
+    console.log(discounted.join(", "));
+
+    console.log(discounted.length);
+
+  </script>
+
+</body>
+
+</html>
