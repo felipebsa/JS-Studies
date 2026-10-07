@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A5 · Functions</title>
+</head>
+
+<body>
+
+  <h1>A5 · Functions</h1>
+
+  <script>
+
+    function priceWithDiscount(price, percent) {
+
+      return price - (price * percent) / 100;
+
+    }
+
+
+    function formatReais(value) {
+
+      return "R$ " + value.toFixed(2).replace(".", ",");
+
+    }
+
+
+    console.log(formatReais(priceWithDiscount(200, 10)));
+
+    console.log(formatReais(priceWithDiscount(80, 25)));
+
+  </script>
+
+</body>
+
+</html>
