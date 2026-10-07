@@ -6,44 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A7 · Objects and lists of objects</title>
 </head>
-
 <body>
 
   <h1>A7 · Objects and lists of objects</h1>
-
   <script>
 
     const students = [
-
       { name: "Ana", grade: 8 },
-
       { name: "Bruno", grade: 6 },
-
       { name: "Carla", grade: 10 }
-
     ];
 
 
     let sum = 0;
 
     for (const student of students) {
-
       console.log(student.name + ": " + student.grade);
-
       sum += student.grade;
-
     }
-
 
     console.log("Class average: " + sum / students.length);
 
-
     const carla = students.find(s => s.name === "Carla");
-
     console.log("Carla's grade: " + carla.grade);
 
   </script>
-
 </body>
-
 </html>

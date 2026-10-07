@@ -6,37 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A8 · Sorting and summarizing objects</title>
 </head>
-
 <body>
 
   <h1>A8 · Sorting and summarizing objects</h1>
-
   <script>
 
     const students = [
-
       { name: "Ana", grade: 8 },
-
       { name: "Bruno", grade: 6 },
-
       { name: "Carla", grade: 10 },
-
       { name: "Diego", grade: 4 }
-
     ];
 
 
     const ranking = [...students].sort((a, b) => b.grade - a.grade);
-
     ranking.forEach((student, index) => {
-
       console.log(`${index + 1}. ${student.name}: ${student.grade}`);
-
     });
 
-
     const total = students.reduce((sum, student) => sum + student.grade, 0);
-
     const average = total / students.length;
 
     console.log(`Class average: ${average.toFixed(1)}`);
@@ -46,7 +34,6 @@
 
     console.log(`Everyone passed? ${everyonePassed}`);
 
-
     const failed = students
       .filter(student => student.grade < 6)
       .map(student => student.name);
@@ -54,7 +41,5 @@
     console.log(`Failed: ${failed.join(", ")}`);
 
   </script>
-
 </body>
-
 </html>
