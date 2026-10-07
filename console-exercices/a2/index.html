@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A2 · Types and conversion</title>
+</head>
+
+<body>
+
+  <h1>A2 · Types and conversion</h1>
+
+  <script>
+
+    const grade1 = "9";
+    const grade2 = "6";
+
+    const average = (Number(grade1) + Number(grade2)) / 2;
+
+    console.log(`Average: ${average.toFixed(2)}`);
+
+
+    const invalid = Number("abc");
+
+    console.log(isNaN(invalid));
+
+  </script>
+
+</body>
+
+</html>
