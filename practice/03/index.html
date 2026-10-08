@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <script>
+        function greet(name) {
+            return `Olá, ${name}`;
+        }
+        function callName(nickname) {
+            console.log(greet(nickname))
+        }
+        function isFamous(votes) {
+            return votes > 10
+        }
+        function lanternStatus(votes) {
+             if (votes > 10) {
+                return "famous"
+            }
+            else if (votes >= 0){
+                return "normal"
+            }
+            else {
+                return"negative"
+            }
+        }
+        function sumUntil(n) {
+            let total = 0
+            for (let i=0; i <= n; i++) {
+                total+=i
+            }
+            return total
+        }
+        // arrow function for 2 item
+        const arrowIsFamous = (votes) => votes > 10
+
+        const double = (n) => n * 2
+        
+
+        callName("felipe")
+        console.log(isFamous(15))
+        console.log(lanternStatus(12))
+        console.log(sumUntil(100))
+        console.log(arrowIsFamous(3))
+        console.log(double(20))
+    </script>
+</body>
+</html>
