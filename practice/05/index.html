@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+<body>
+    <script>
+        const lanterns = [
+            { title: "First day of school", votes: 12, theme: "medieval", isPrivate: false },
+            { title: "My dog", votes: -3, theme: "space", isPrivate: true },
+            { title: "2019 concert", votes: 30, theme: "cyberpunk", isPrivate: true },
+            { title: "Beach trip", votes: 5, theme: "seasons", isPrivate: false },
+            { title: "Grandma's cake", votes: 22, theme: "asian", isPrivate: false },
+            { title: "Lost my phone", votes: -8, theme: "cyberpunk", isPrivate: false },
+            { title: "Graduation day", votes: 41, theme: "medieval", isPrivate: true },
+        ];
+        lanterns.forEach((l) => console.log(`${l.title} - ${l.theme}`))
+        
+        const lTitle = lanterns.map((l) => l.title)
+        console.log(lTitle)
+
+        const lLabels = lanterns.map((l) => `${l.title} - ${l.votes}`)
+        console.log(lLabels)
+
+        const lFamous = lanterns.filter((l) => l.votes > 10) 
+        console.log(lFamous)
+
+        const lPublics = lanterns.filter((l) => !l.isPrivate)
+        console.log(lPublics)
+
+        const findTitle = lanterns.find((l) => l.title === "My dog")
+        console.log(findTitle.theme)
+
+        const findNoneTitle = lanterns.find((l) => l.title === null)
+        console.log(findNoneTitle) // undefined
+
+        const famousTitles = lFamous.map((l) => l.title)
+        console.log(famousTitles)
+        // or
+        const mfamousTitles = lanterns.filter((l) => l.votes > 10).map((l) => l.title)
+        console.log(mfamousTitles)
+    </script>
+</body>
+</html>
