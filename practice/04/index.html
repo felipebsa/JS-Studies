@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <script>
+        const lantern1 = {
+            title: "felipe",
+            votes: 19,
+            theme: "asian",
+            isPrivate: false
+        }
+        console.log(lantern1.title)
+        lantern1.votes++
+        console.log(lantern1.votes)
+        const lanterns = []
+
+        lanterns.push({ title: "First day of school", votes: 12, theme: "medieval", isPrivate: false }, { title: "My dog", votes: -3, theme: "space", isPrivate: true }, { title: "2019 concert", votes: 30, theme: "cyberpunk", isPrivate: true });
+        console.log(lanterns)
+        console.log(lanterns.length)
+        for (const lantern of lanterns) {
+            console.log(`${lantern.title} - ${lantern.votes} votes`)
+        }
+
+        function countPrivate(list) {
+            const privates = list.filter(l => l.isPrivate);
+            return privates.length
+        }
+
+        console.log(countPrivate(lanterns))
+    </script>
+</body>
+</html>
