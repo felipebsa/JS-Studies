@@ -1,0 +1,8 @@
+/* style.css */
+.dark {
+    background-color: #080808;
+    color: #eee;
+}
+.highlight {
+    box-shadow: 0 0 20px 5px #320174;
+}
