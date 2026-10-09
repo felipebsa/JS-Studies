@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+<body>
+    <script>
+        const lanterns = [
+            { title: "First day of school", votes: 12, theme: "medieval", isPrivate: false },
+            { title: "My dog", votes: -3, theme: "space", isPrivate: true },
+            { title: "2019 concert", votes: 30, theme: "cyberpunk", isPrivate: true },
+            { title: "Beach trip", votes: 5, theme: "seasons", isPrivate: false },
+            { title: "Grandma's cake", votes: 22, theme: "asian", isPrivate: false },
+            { title: "Lost my phone", votes: -8, theme: "cyberpunk", isPrivate: false },
+            { title: "Graduation day", votes: 41, theme: "medieval", isPrivate: true },
+        ];
+
+        function sumVotes(list) {
+            let votes = 0
+            for (const lantern of list) {
+                votes+=lantern.votes
+            }
+            return votes
+        }
+        console.log(sumVotes(lanterns))
+
+        function byTheme(list, theme) {
+            return list.filter((l) => l.theme===theme)
+        }
+        console.log(byTheme(lanterns, "cyberpunk"))
+
+        const getTitles = (list) => list.map((l) => l.title)
+        console.log(getTitles(lanterns))
+
+        function lanternStatus(l) {
+            if (l.votes > 10) {
+                return "famous"
+            }
+            else if (l.votes >= 0) {
+                return "normal"
+            }
+            else {
+                return "negative"
+            }
+        }
+        console.log(lanternStatus(lanterns[0]))
+
+        lanterns.forEach((l) => console.log(`${l.title}: ${lanternStatus(l)}`))
+
+        // const findByTitle = (list, title) => list.find((l) => l.title === title) 
+        
+        function findByTitle(list, title) {
+            const foundTitle = list.find((l) => l.title === title)
+            if (foundTitle) {
+                return foundTitle
+            }
+            else {
+                return "not found"
+            }
+        }
+        console.log(findByTitle(lanterns, "My dog"))
+
+        function mostVoted(list) {
+            let biggest = list[0]
+            for (let i=0; i < list.length; i++) {
+
+                if (list[i].votes > biggest.votes) {
+                    biggest = list[i]
+                }
+            }
+            return biggest
+        }
+        console.log(mostVoted(lanterns))
+    </script>
+</body>
+</html>
