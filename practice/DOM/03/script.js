@@ -37,16 +37,29 @@ btn.addEventListener("click", () => {
     input.value = ""
 })
 
+function renderLantern(l) {
+    const li = document.createElement("li")
+    const rBtn = document.createElement("button")
+    ul.append(li)
+    
+    li.textContent = `${l.title} - ${l.votes} votes >>> `
+    rBtn.textContent = "remove"
+    li.append(rBtn)
+
+    rBtn.addEventListener("click", () => {
+        li.remove()
+        const position = lanterns.indexOf(l)
+        lanterns.splice(position, 1)
+        countLanterns(lanterns)
+    })
+
+}
+
 function countLanterns(list) {
     cntLanterns.textContent = `${list.length} lanterns`;
 }
 
-function renderLantern(l) {
-    const li = document.createElement("li")
-    ul.append(li)
-    li.textContent = `${l.title} - ${l.votes} votes`
 
-}
 
 lanterns.forEach((l) => renderLantern(l))
 countLanterns(lanterns)
